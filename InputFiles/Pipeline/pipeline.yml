@@ -10,21 +10,11 @@ jobs:
         inputs:
           packageType: sdk
           version: 5.x
-        
-      - task: DotNetCoreCLI@2
-        displayName: 'Build Toolkit'
-        inputs:
-          command: 'build'
-          arguments: '--configuration $(configuration)'
-          projects: '**/*.csproj'
-
 
       - task: CmdLine@2
         displayName: Create APIMTemplate Tool
         inputs:
           script: |
-            dotnet restore
-            dotnet pack -c Release
             dotnet new tool-manifest
             dotnet tool install --add-source "apimtemplate/bin/Release" apimtemplate
           failOnStderr: true
