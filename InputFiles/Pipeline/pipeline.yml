@@ -15,7 +15,7 @@ jobs:
       - task: DotNetCoreCLI@2
         inputs:
           command: 'custom'
-          custom: 'dotnet restore'
+          custom: 'restore'
       
       - task: DotNetCoreCLI@2
         inputs:
