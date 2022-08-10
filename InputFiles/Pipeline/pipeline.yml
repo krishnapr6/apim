@@ -15,7 +15,7 @@ jobs:
       - task: DotNetCoreCLI@2
         inputs:
           command: 'custom'
-          custom: 'dotnet tool install --add-source "apimtemplate/bin/Release" apimtemplate'
+          custom: 'tool install --add-source "apimtemplate/bin/Release" apimtemplate'
 
 
       - task: CmdLine@2
