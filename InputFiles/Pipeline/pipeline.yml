@@ -10,7 +10,14 @@ jobs:
         inputs:
           packageType: sdk
           version: 5.x
-          installationPath: /home/vsts/work/dotnet
+        
+      - task: DotNetCoreCLI@2
+        displayName: 'Build Toolkit'
+        inputs:
+          command: 'build'
+          arguments: '--configuration $(configuration)'
+          projects: '**/*.csproj'
+
 
       - task: CmdLine@2
         displayName: Create APIMTemplate Tool
