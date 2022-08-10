@@ -12,16 +12,16 @@ jobs:
           version: 5.x
           installationPath: /home/vsts/work/1/s/dotnet
 
-      - task: CmdLine@2
-        displayName: Create APIMTemplate Tool
-        inputs:
-          script: |
-            dotnet new webapp -o MyWebApp --no-https -f net6.0
-            dotnet restore
-            dotnet pack -c Release
-            dotnet new tool-manifestfest
-            dotnet add package apimtemplate --version 1.0.0
-          failOnStderr: true
+      # - task: CmdLine@2
+      #   displayName: Create APIMTemplate Tool
+      #   inputs:
+      #     script: |
+      #       dotnet new webapp -o MyWebApp --no-https -f net6.0
+      #       dotnet restore
+      #       dotnet pack -c Release
+      #       dotnet new tool-manifestfest
+      #       dotnet add package apimtemplate --version 1.0.0
+      #     failOnStderr: true
 
       - task: CmdLine@2
         displayName: Generate ARM templates using Tool
