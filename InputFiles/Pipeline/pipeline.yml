@@ -2,8 +2,8 @@ jobs:
   - job: BuildandPush
     #timeoutInMinutes: 180
     displayName: BuildandPush
-    # pool:
-      # vmImage: ubuntu-latest
+    pool:
+      vmImage: windows
     steps:      
       - task: UseDotNet@2
         displayName: $(Environment) Use Dotnet 2.1
