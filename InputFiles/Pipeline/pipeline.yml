@@ -16,7 +16,7 @@ jobs:
         inputs:
           script: |
             dotnet new tool-manifest
-            dotnet tool install --add-source "apimtemplate/bin/Release" apimtemplate
+            dotnet add package apimtemplate --version 1.0.0
           failOnStderr: true
 
       - task: CmdLine@2
