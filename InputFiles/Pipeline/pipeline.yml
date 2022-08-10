@@ -11,21 +11,6 @@ jobs:
           packageType: sdk
           version: 5.x
           installationPath: $(Agent.ToolsDirectory)/dotnet
-          
-      - task: DotNetCoreCLI@2
-        inputs:
-          command: 'custom'
-          custom: 'restore'
-      
-      - task: DotNetCoreCLI@2
-        inputs:
-          command: 'custom'
-          custom: 'dotnet pack -c Release'
-      
-      - task: DotNetCoreCLI@2
-        inputs:
-          command: 'custom'
-          custom: 'dotnet new tool-manifest'
       
       - task: DotNetCoreCLI@2
         inputs:
