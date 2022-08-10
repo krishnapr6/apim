@@ -16,9 +16,8 @@ jobs:
         displayName: Create APIMTemplate Tool
         inputs:
           script: |
-            #dotnet restore
-            #dotnet pack -c Release
-            #dotnet new tool-manifest
+            dotnet restore
+            dotnet pack -c Release
             dotnet tool install --add-source "apimtemplate/bin/Release" apimtemplate
           failOnStderr: true
 
