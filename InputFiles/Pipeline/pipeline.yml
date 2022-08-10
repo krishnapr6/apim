@@ -3,7 +3,7 @@ jobs:
     #timeoutInMinutes: 180
     displayName: BuildandPush
     pool:
-      vmImage: windows
+      vmImage: windows-latest
     steps:      
       - task: UseDotNet@2
         displayName: $(Environment) Use Dotnet 2.1
