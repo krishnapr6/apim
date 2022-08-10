@@ -10,6 +10,7 @@ jobs:
         inputs:
           packageType: sdk
           version: 5.x
+          installationPath: /home/vsts/work/1/s/dotnet
 
       - task: CmdLine@2
         displayName: Create APIMTemplate Tool
