@@ -2,7 +2,7 @@ jobs:
   - job: BuildandPush
     #timeoutInMinutes: 180
     displayName: BuildandPush
-    pool:
+    # pool:
       # vmImage: ubuntu-latest
     steps:      
       - task: UseDotNet@2
