@@ -11,12 +11,6 @@ jobs:
           packageType: sdk
           version: 5.x
           installationPath: $(Agent.ToolsDirectory)/dotnet
-      
-      - task: DotNetCoreCLI@2
-        inputs:
-          command: 'custom'
-          custom: 'tool install --add-source "apimtemplate/bin/Release" apimtemplate'
-
 
       - task: CmdLine@2
         displayName: Create APIMTemplate Tool
