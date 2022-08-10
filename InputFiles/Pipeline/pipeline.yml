@@ -15,7 +15,7 @@ jobs:
       - task: CmdLine@2
         displayName: Create Tool
         inputs:
-          script: 'dotnet tool run create  --configFile "./valid.yml"'
+          script: 'dotnet tool run create  --configFile "/home/vsts/work/1/s/valid.yml"'
       - task: CmdLine@2
         displayName: Create APIMTemplate Tool
         inputs:
