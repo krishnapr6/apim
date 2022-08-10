@@ -1,3 +1,9 @@
+jobs:
+  - job: BuildandPush
+    displayName: BuildandPush
+    pool:
+      vmImage: ubuntu-latest
+    steps:  
       - task: UseDotNet@2
         displayName: $(Environment) Use Dotnet 2.1
         inputs:
